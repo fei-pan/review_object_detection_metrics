@@ -269,7 +269,7 @@ def plot_precision_recall_curve(results,
     plt.legend(shadow=True)
     plt.grid()
     if savePath is not None:
-        plt.savefig(os.path.join(savePath, 'all_classes.png'))
+        plt.savefig(os.path.join(savePath, 'all_classes.pdf'), format="pdf", bbox_inches="tight")
     if showGraphic is True:
         plt.show()
         # plt.waitforbuttonpress()
@@ -374,7 +374,7 @@ def plot_precision_recall_curves(results,
         plt.xlim([-0.1, 1.1])
         plt.ylim([-0.1, 1.1])
         if savePath is not None:
-            plt.savefig(os.path.join(savePath, classId + '.png'))
+            plt.savefig(os.path.join(savePath, classId + '.pdf'), format="pdf", bbox_inches="tight")
         if showGraphic is True:
             plt.show()
             # plt.waitforbuttonpress()
